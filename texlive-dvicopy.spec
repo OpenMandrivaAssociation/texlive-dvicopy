@@ -1,12 +1,12 @@
-# revision 23089
+# revision 26689
 # category TLCore
 # catalog-ctan /dviware/dvicopy/dvicopy.web
-# catalog-date 2011-01-01 13:56:40 +0100
+# catalog-date 2012-04-10 15:00:16 +0200
 # catalog-license gpl
 # catalog-version 1.5
 Name:		texlive-dvicopy
 Version:	1.5
-Release:	2
+Release:	3
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
