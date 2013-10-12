@@ -1,12 +1,12 @@
-# revision 23089
+# revision 29764
 # category TLCore
 # catalog-ctan /dviware/dvicopy/dvicopy.web
-# catalog-date 2011-01-01 13:56:40 +0100
+# catalog-date 2012-04-10 15:00:16 +0200
 # catalog-license gpl
 # catalog-version 1.5
 Name:		texlive-dvicopy
 Version:	1.5
-Release:	2
+Release:	3
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
@@ -27,7 +27,7 @@ basis for writing DVI drivers (much like DVItype).
 #-----------------------------------------------------------------------
 %files
 %doc %{_mandir}/man1/dvicopy.1*
-%doc %{_texmfdir}/doc/man/man1/dvicopy.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/dvicopy.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -37,20 +37,6 @@ basis for writing DVI drivers (much like DVItype).
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.5-2
-+ Revision: 751179
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.5-1
-+ Revision: 718277
-- texlive-dvicopy
-- texlive-dvicopy
-- texlive-dvicopy
-- texlive-dvicopy
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
