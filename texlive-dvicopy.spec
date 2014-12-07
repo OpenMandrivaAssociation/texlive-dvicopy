@@ -6,7 +6,7 @@
 # catalog-version 1.5
 Name:		texlive-dvicopy
 Version:	1.5
-Release:	9
+Release:	10
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
