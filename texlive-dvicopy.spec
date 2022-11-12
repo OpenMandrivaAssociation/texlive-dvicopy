@@ -1,18 +1,12 @@
-# revision 29764
-# category TLCore
-# catalog-ctan /dviware/dvicopy/dvicopy.web
-# catalog-date 2012-04-10 15:00:16 +0200
-# catalog-license gpl
-# catalog-version 1.5
 Name:		texlive-dvicopy
-Version:	1.5
-Release:	12
+Version:	62387
+Release:	1
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -31,7 +25,7 @@ basis for writing DVI drivers (much like DVItype).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
