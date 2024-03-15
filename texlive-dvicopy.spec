@@ -1,5 +1,5 @@
 Name:		texlive-dvicopy
-Version:	66186
+Version:	70015
 Release:	1
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
