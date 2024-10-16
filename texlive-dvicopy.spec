@@ -3,7 +3,7 @@ Version:	70015
 Release:	1
 Summary:	Copy DVI files, flattening VFs
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
+URL:		https://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.doc.r%{version}.tar.xz
