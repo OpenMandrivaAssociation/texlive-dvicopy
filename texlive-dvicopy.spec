@@ -1,36 +1,27 @@
-Name:		texlive-dvicopy
-Version:	76924
-Release:	1
-Summary:	Copy DVI files, flattening VFs
+%global tl_name dvicopy
+%global tl_revision 77830
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.6
+Release:	%{tl_revision}.1
+Summary:	Copy DVI files while expanding VF (virtual font) references
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/dviware/dvicopy/dvicopy.web
-License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.doc.r%{version}.tar.xz
+URL:		https://www.ctan.org/pkg/dvicopy
+License:	gpl
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/dvicopy.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires:	texlive-dvicopy.bin
+%texlive_base_requires
+Requires:	texlive(dvicopy.bin)
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-DVICOPY is a utility program that allows one to take a DVI file
-that references composite fonts (VF) and convert it into a DVI
-file that does not contain such references. It also serves as a
-basis for writing DVI drivers (much like DVItype).
+DVIcopy is a utility program that allows one to convert a DVI file that
+references composite fonts (VF) into an equivalent DVI file that does
+not contain such references. It also serves as a basis for writing DVI
+drivers (much like DVItype). The ODVIcopy variant does the same job for
+Omega/Aleph's output, modified to support their .ofm font format.
 
-#-----------------------------------------------------------------------
-%files
-%doc %{_mandir}/man1/dvicopy.1*
-%doc %{_texmfdistdir}/doc/man/man1/dvicopy.man1.pdf
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf-dist %{buildroot}%{_datadir}
-mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
